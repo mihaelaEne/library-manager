@@ -11,8 +11,9 @@ public static void main(String[] args){
 
 
     ViewStudent viewStudent=new ViewStudent();
-//    BookController bookController=new BookController();
-//    bookController.load();
+//  BookController bookController=new BookController();
+//   boolean studentulAreCartea=bookController.studentulAreCartea(1,"Mandrie si prejudecata","Austen");
+//    System.out.println(studentulAreCartea);
 //    ArrayList<Book> ListaCartiId1=bookController.findAllStudentBooks(1);
 //    System.out.println(ListaCartiId1);
 

@@ -10,35 +10,50 @@ import java.util.Scanner;
 public class StudentController {
 
 
-    private ArrayList<Student> students=new ArrayList();
-    public StudentController(ArrayList<Student>students){
-        this.students=students;
+    private ArrayList<Student> students = new ArrayList();
+
+    public StudentController(ArrayList<Student> students) {
+        this.students = students;
     }
 
-    public StudentController(){
-        this.students=new ArrayList();
+    public StudentController() {
+        this.students = new ArrayList();
         this.load();
     }
 
 
-    public void load(){
+    public void load() {
         try {
             File file = new File("C:\\mycode\\OOP\\incapsularea\\lottery manager\\src\\ro\\mycode\\data\\student.txt");
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
-                Student student=new Student(scanner.nextLine());
+                Student student = new Student(scanner.nextLine());
                 this.students.add(student);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void afisareStudent(){
-        for(int i=0; i<students.size(); i++){
+    public void afisareStudent() {
+        for (int i = 0; i < students.size(); i++) {
             System.out.println(this.students.get(i).descriereStudent());
             System.out.println("\n");
         }
     }
 
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
