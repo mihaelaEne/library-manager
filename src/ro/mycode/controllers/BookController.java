@@ -62,7 +62,10 @@ public class BookController {
     }
 
     public void removeBook(Book book) {
-        this.books.remove(book);
+        if(this.studentulAreCartea(book.getStudentId(), book.getTitle(), book.getAutor())){
+            System.out.println("cartea este in lista ");
+
+        }else {this.books.remove(book);}
     }
 
     public Book findById(int id) {

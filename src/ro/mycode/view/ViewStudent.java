@@ -28,6 +28,7 @@ public class ViewStudent {
         System.out.println("Buna " + this.student.getFirstName() + " !");
         System.out.println("1-pt a afisa toate cartile dvs");
         System.out.println("2-adaugare carte");
+        System.out.println("3-pt a sterge o carte");
 
 
     }
@@ -47,6 +48,8 @@ public class ViewStudent {
                 case 2:
                     adaugareCarte();
                     break;
+                case 3: stergereCarte();
+                break;
                 default:
                     System.out.println("Alegere gresita");
                     break;
@@ -77,6 +80,12 @@ public class ViewStudent {
 
     }
 
+    private void stergereCarte(){
+
+
+
+    }
+
     private void afisareBooks() {
 
         ArrayList<Book> studentBooks = bookController.findAllStudentBooks(this.student.getId());
@@ -84,11 +93,12 @@ public class ViewStudent {
 
         for (Book book : studentBooks) {
 
-
             System.out.println(book.descriereBook());
 
         }
 
 
     }
+
+
 }
