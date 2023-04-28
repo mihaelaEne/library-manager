@@ -12,6 +12,7 @@ public class StudentController {
 
     private ArrayList<Student> students = new ArrayList();
 
+
     public StudentController(ArrayList<Student> students) {
         this.students = students;
     }
@@ -42,6 +43,25 @@ public class StudentController {
         }
     }
 
+    public void addStudent(Student student) {
+        this.students.add(student);
+    }
+
+    public void removeStudent(Student student) {
+        this.students.remove(student);
+    }
+
+
+    public Student findByName(String firstName) {
+        for (int i = 0; i < this.students.size(); i++) {
+            if (students.get(i).getFirstName().equals(firstName)) {
+                if (students.get(i).getFirstName().equals(firstName)) {
+                    return students.get(i);
+                }
+            }
+        }
+        return null;
+    }
 
 
 }
