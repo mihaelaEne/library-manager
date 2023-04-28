@@ -1,5 +1,7 @@
 package ro.mycode.model;
 
+import java.util.ArrayList;
+
 public class Student {
     private int id;
     private String firstName;
@@ -13,7 +15,12 @@ public class Student {
         this.lastName = lastName;
         this.email = email;
         this.age = age;
+
     }
+
+
+
+
 
     public Student(){}
 
