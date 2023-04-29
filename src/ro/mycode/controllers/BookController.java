@@ -104,4 +104,18 @@ public class BookController {
     }
 
 
+    public void editareBook(Book book){
+        Book deEditat=findById(book.getId());
+
+        if(book.getTitle()!=null){
+            deEditat.setTitle(book.getTitle());
+        }
+        if(book.getAutor()!=null){
+            deEditat.setAutor(book.getAutor());
+        }
+        if(book.getCreateAt()!=null){
+            deEditat.setCreateAt(book.getCreateAt());
+        }
+    }
+
 }
