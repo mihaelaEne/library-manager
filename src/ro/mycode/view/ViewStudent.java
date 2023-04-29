@@ -29,6 +29,7 @@ public class ViewStudent {
         System.out.println("1-pt a afisa toate cartile dvs");
         System.out.println("2-adaugare carte");
         System.out.println("3-pt a sterge o carte");
+        System.out.println("4- editeaza o carte ");
 
 
     }
@@ -49,6 +50,8 @@ public class ViewStudent {
                     adaugareCarte();
                     break;
                 case 3: stergereCarte();
+                break;
+                case 4: editareCarte();
                 break;
                 default:
                     System.out.println("Alegere gresita");
@@ -82,7 +85,17 @@ public class ViewStudent {
 
     private void stergereCarte(){
 
+        System.out.println("Intr id-ul");
+        int id=Integer.parseInt(scanner.nextLine());
 
+        Book book=bookController.findById(id);
+
+        if(book==null){
+            System.out.println("Nu este in lista cartea");
+        }else{
+            bookController.removeBook(book);
+            System.out.println("Cartea a fost stearsa");
+        }
 
     }
 
@@ -99,6 +112,52 @@ public class ViewStudent {
 
 
     }
+
+
+    private void editareCarte(){
+        System.out.println("Intr id-ul:");
+        int id=Integer.parseInt(scanner.nextLine());
+
+        Book book=bookController.findById(id);
+        if(book==null){
+            System.out.println("Nu exista o carte cu id-ul introdus");
+        }else{
+            System.out.println("Introduceti cu virgula ce doresti sa modifici(titlu, autor,data): ");
+
+            String [] upd= scanner.nextLine().split(",");
+            Book nou=new Book();
+
+            nou.setId(book.getId());
+
+            for(int i=0; i< upd.length; i++){
+                switch (upd[i]){
+                    case "titlu":
+                        System.out.println("Intr titlul:");
+                        String title= scanner.nextLine();
+
+                        nou.setTitle(title);
+
+                        break;
+                    case "autor":
+                        System.out.println("Intr autorul:");
+                        String autor= scanner.nextLine();
+                        nou.setAutor(autor);
+                        break;
+                    case "data":
+                        System.out.println("Intr data:");
+                        LocalDate data=LocalDate.parse(scanner.nextLine());
+                        nou.setCreateAt(data);
+
+                        break;
+                    default:
+                        System.out.println("Eroare");
+
+                }
+            }
+            bookController.editareBook(nou);
+        }
+    }
+
 
 
 }

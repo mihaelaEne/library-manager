@@ -13,6 +13,8 @@ public class Book {
     LocalDate createAt;
 
 
+    public Book(){};
+
     public Book(String prop){
         String [] split=prop.split(",");
         this.id=Integer.parseInt(split[0]);
@@ -32,6 +34,10 @@ public class Book {
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getStudentId() {

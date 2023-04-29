@@ -97,30 +97,6 @@ public class BookControllerTest
         assertEquals(null, bookController.findById(5));
     }
 
-//    @Test
-//    public void testStudentulAreCartea() {
-//        ArrayList<Book> books = new ArrayList<>();
-//        LocalDate date1 = LocalDate.of(2023, 11, 12);
-//        Book b1 = new Book(1, 11, "titlu1", "autor1", date1);
-//        books.add(b1);
-//        LocalDate date2 = LocalDate.of(2022, 11, 12);
-//        Book b2 = new Book(2, 22, "titlu2", "autor2", date2);
-//        books.add(b2);
-//        LocalDate date3 = LocalDate.of(2021, 11, 12);
-//        Book b3 = new Book(3, 33, "titlu3", "autor3", date3);
-//        books.add(b3);
-//        LocalDate date4 = LocalDate.of(2020, 11, 12);
-//        Book b4 = new Book(4, 44, "titlu4", "autor4", date4);
-//        books.add(b4);
-//
-//        BookController bookController = new BookController(books);
-//
-//
-//        assertTrue(bookController.studentulAreCartea(1, "titlu1", "autor1"));
-//        assertFalse(bookController.studentulAreCartea(2, "titlu1", "autor1"));
-//        assertFalse(bookController.studentulAreCartea(1, "titlu2", "autor1"));
-//        assertFalse(bookController.studentulAreCartea(1, "titlu1", "autor2"));
-//    }
 
 
 
