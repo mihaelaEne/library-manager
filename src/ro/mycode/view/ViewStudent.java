@@ -68,11 +68,7 @@ public class ViewStudent {
         String autor=scanner.nextLine();
         System.out.println("created at: ");
         LocalDate createdAt=LocalDate.parse(scanner.nextLine());
-
-
         boolean isBook = this.bookController.studentulAreCartea(this.student.getId(), titlu, autor);
-
-
         if(!isBook){
             this.bookController.addBook(new Book(bookController.generareId(),this.student.getId(),titlu,autor,createdAt));
             System.out.println("Adaugat cu succes");
