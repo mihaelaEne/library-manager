@@ -54,20 +54,15 @@ public class BookController {
         return studentBooks;
     }
 
-    public void addBook(Book book) {
-     if(this.studentulAreCartea(book.getStudentId(), book.getTitle(), book.getAutor())){
-         System.out.println("Cartea "+book.getTitle()+ "exista deja ");
+    //add, remove
 
-     }else {this.books.add(book);}
+    public void addBook(Book book){
+        this.books.add(book);
     }
 
-    public void removeBook(Book book) {
-        if(this.studentulAreCartea(book.getStudentId(), book.getTitle(), book.getAutor())){
-            System.out.println("cartea este in lista ");
-
-        }else {this.books.remove(book);}
+    public void removeBook(Book book){
+        this.books.remove(book);
     }
-
     public Book findById(int id) {
         for (int i = 0; i < this.books.size(); i++) {
             if (books.get(i).getId() == id) {
@@ -80,15 +75,10 @@ public class BookController {
     //todo:metoda ce verifica daca un anume student are deja cartea cu titlul si autorul respectiv
 
     public boolean studentulAreCartea(int idStudent, String title, String autor){
-
-
         for(int i=0;i<this.books.size();i++){
-
             if(books.get(i).getStudentId()==idStudent&& books.get(i).getTitle().equals(title)&&books.get(i).getAutor().equals(autor)){
-
                 return true;
             }
-
         }
         return false;
     }
