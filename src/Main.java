@@ -1,23 +1,31 @@
 import ro.mycode.controllers.BookController;
 import ro.mycode.controllers.StudentController;
 import ro.mycode.model.Book;
+import ro.mycode.model.Student;
+import ro.mycode.view.ViewLogin;
 import ro.mycode.view.ViewStudent;
 
+import java.awt.image.AreaAveragingScaleFilter;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Main {
 
-public static void main(String[] args){
+    public static void main( String[] args) {
+       //ViewStudent viewStudent=new ViewStudent();
 
+        ViewLogin viewLogin=new ViewLogin();
 
-    ViewStudent viewStudent=new ViewStudent();
+//        StudentController studentController=new StudentController();
+//        Student student=studentController.findStudentConectare("maria.popescu@gmail.com","pass1");
+//
+//        if(student!=null){
+//            System.out.println("Studentul este: "+student.getFirstName()+" "+student.getLastName());
+//
+//        }else {
+//            System.out.println("eroare");
+//        }
+//
 
-
-//  BookController bookController=new BookController();
-//   boolean studentulAreCartea=bookController.studentulAreCartea(1,"Mandrie si prejudecata","Austen");
-//    System.out.println(studentulAreCartea);
-//    ArrayList<Book> ListaCartiId1=bookController.findAllStudentBooks(1);
-//    System.out.println(ListaCartiId1);
-
-}
+    }
 }

@@ -4,8 +4,9 @@ import ro.mycode.model.Book;
 import ro.mycode.model.Student;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 public class BookController {
@@ -107,5 +108,33 @@ public class BookController {
             deEditat.setCreateAt(book.getCreateAt());
         }
     }
+
+    public String toSave(){
+        String text="";
+        int i=0;
+        for( i=0; i<books.size()-1;i++){
+            text+=books.get(i).toSave()+"\n";
+        }
+        text+=books.get(i).toSave();
+        return text;
+    }
+
+    public void save(){
+        try {
+            File file = new File("C:\\mycode\\OOP\\incapsularea\\library-manager\\src\\ro\\mycode\\data\\book.txt");
+
+            FileWriter fileWriter= new FileWriter(file);
+
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+
+            printWriter.print(toSave());
+
+            printWriter.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
 }

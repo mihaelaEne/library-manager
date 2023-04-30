@@ -1,4 +1,5 @@
 11,1,Macbeth,William,1606-02-25
-22,1,Mandrie si prejudecata,Austen,1993-01-12
 33,2,Dracula,Bram,1897-06-07
 44,1,test1,test2,1111-11-11
+9,99,testTitlu9,testAutor9,2023-11-12
+8,88,testTitlu8,testAutor8,2022-12-21
