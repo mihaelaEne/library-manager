@@ -12,13 +12,14 @@ import java.util.Scanner;
 public class ViewStudent {
 
     private Student student;
+    private StudentController studentController;
 
     private BookController bookController;
     private Scanner scanner;
 
-    public ViewStudent() {
+    public ViewStudent(Student student) {
 
-        this.student = new Student(1, "test", "test2", "test3", 12);
+        this.student = student;
         bookController = new BookController();
         scanner = new Scanner(System.in);
         play();
@@ -30,7 +31,9 @@ public class ViewStudent {
         System.out.println("2-adaugare carte");
         System.out.println("3-pt a sterge o carte");
         System.out.println("4- editeaza o carte ");
-
+        System.out.println("5-editeaza o carte ");
+        System.out.println("6-salveaza si iesi");
+        System.out.println("7-iesire FARA salvare");
 
     }
 
@@ -53,6 +56,17 @@ public class ViewStudent {
                 break;
                 case 4: editareCarte();
                 break;
+                case 5:editareCarte();
+                break;
+                case 6:
+                    running=false;
+                    bookController.save();
+                    System.out.println("V-ati delogat");
+                    break;
+                case 7:
+                    running=false;
+                    System.out.println("V-ati delogat");
+                    break;
                 default:
                     System.out.println("Alegere gresita");
                     break;
@@ -94,7 +108,6 @@ public class ViewStudent {
         }
 
     }
-
     private void afisareBooks() {
 
         ArrayList<Book> studentBooks = bookController.findAllStudentBooks(this.student.getId());
@@ -108,8 +121,6 @@ public class ViewStudent {
 
 
     }
-
-
     private void editareCarte(){
         System.out.println("Intr id-ul:");
         int id=Integer.parseInt(scanner.nextLine());
@@ -153,7 +164,6 @@ public class ViewStudent {
             bookController.editareBook(nou);
         }
     }
-
 
 
 }

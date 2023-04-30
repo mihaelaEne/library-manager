@@ -8,19 +8,29 @@ public class Student {
     private String lastName;
     private String email;
     private int age;
-
-    public Student(int id, String firstName, String lastName, String email, int age) {
+    private String password;
+    public Student(int id, String firstName, String lastName, String email, int age, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.age = age;
+        this.password=password;
 
     }
 
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public Student(){}
 
@@ -68,6 +78,7 @@ public class Student {
         this.lastName=split[2];
         this.email=split[3];
         this.age=Integer.parseInt(split[4]);
+        this.password=split[5];
     }
     public String descriereStudent(){
         String text="";
@@ -75,8 +86,12 @@ public class Student {
         text+="First name: "+this.firstName+"\n";
         text+="Last name: "+this.lastName+"\n";
         text+="Email: "+this.email+"\n";
-        text+="Age: "+this.age;
+        text+="Age: "+this.age+"\n";
+        text+="Parola este "+this.password;
         return text;
     }
 
+    public String toSave(){
+        return id+","+firstName+","+lastName+","+email+","+age+","+password;
+    }
 }

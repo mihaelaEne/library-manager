@@ -81,4 +81,8 @@ public class Book {
         text+="Created at: "+this.createAt;
         return text;
     }
+
+    public String toSave(){
+        return id+","+studentId+","+title+","+autor+","+createAt;
+    }
 }
