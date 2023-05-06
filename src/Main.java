@@ -1,5 +1,8 @@
+import ro.mycode.controllers.AdminController;
 import ro.mycode.controllers.BookController;
+import ro.mycode.controllers.CourseController;
 import ro.mycode.controllers.StudentController;
+import ro.mycode.model.Admin;
 import ro.mycode.model.Book;
 import ro.mycode.model.Student;
 import ro.mycode.view.ViewLogin;
@@ -25,7 +28,15 @@ public class Main {
 //        }else {
 //            System.out.println("eroare");
 //        }
+
+
+//        AdminController adminController=new AdminController();
+//        adminController.load();
+//        adminController.afisareAdmin();
 //
+
+
+
 
     }
 }
