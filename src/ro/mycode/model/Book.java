@@ -13,17 +13,21 @@ public class Book {
     LocalDate createAt;
 
 
-    public Book(){};
+    public Book() {
+    }
 
-    public Book(String prop){
-        String [] split=prop.split(",");
-        this.id=Integer.parseInt(split[0]);
-        this.studentId=Integer.parseInt(split[1]);
-        this.title=split[2];
-        this.autor=split[3];
-        this.createAt=LocalDate.parse(split[4]);
+    ;
+
+    public Book(String prop) {
+        String[] split = prop.split(",");
+        this.id = Integer.parseInt(split[0]);
+        this.studentId = Integer.parseInt(split[1]);
+        this.title = split[2];
+        this.autor = split[3];
+        this.createAt = LocalDate.parse(split[4]);
 
     }
+
     public Book(int id, int studentId, String title, String autor, LocalDate createAt) {
         this.id = id;
         this.studentId = studentId;
@@ -72,17 +76,17 @@ public class Book {
         this.createAt = createAt;
     }
 
-    public String descriereBook(){
-        String text="";
-        text+="Id: "+this.id+"\n";
-        text+="Student Id: " +this.studentId+"\n";
-        text+="Title: "+this.title+"\n";
-        text+="Autor: "+this.autor+"\n";
-        text+="Created at: "+this.createAt;
+    public String descriereBook() {
+        String text = "";
+        text += "Id: " + this.id + "\n";
+        text += "Student Id: " + this.studentId + "\n";
+        text += "Title: " + this.title + "\n";
+        text += "Autor: " + this.autor + "\n";
+        text += "Created at: " + this.createAt;
         return text;
     }
 
-    public String toSave(){
-        return id+","+studentId+","+title+","+autor+","+createAt;
+    public String toSave() {
+        return id + "," + studentId + "," + title + "," + autor + "," + createAt;
     }
 }

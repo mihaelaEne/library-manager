@@ -9,13 +9,14 @@ public class Student {
     private String email;
     private int age;
     private String password;
+
     public Student(int id, String firstName, String lastName, String email, int age, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.age = age;
-        this.password=password;
+        this.password = password;
 
     }
 
@@ -32,7 +33,8 @@ public class Student {
         this.password = password;
     }
 
-    public Student(){}
+    public Student() {
+    }
 
     public int getId() {
         return id;
@@ -71,27 +73,28 @@ public class Student {
     }
 
 
-    public Student(String prop){
-        String [] split= prop.split(",");
-        this.id=Integer.parseInt(split[0]);
-        this.firstName=split[1];
-        this.lastName=split[2];
-        this.email=split[3];
-        this.age=Integer.parseInt(split[4]);
-        this.password=split[5];
+    public Student(String prop) {
+        String[] split = prop.split(",");
+        this.id = Integer.parseInt(split[0]);
+        this.firstName = split[1];
+        this.lastName = split[2];
+        this.email = split[3];
+        this.age = Integer.parseInt(split[4]);
+        this.password = split[5];
     }
-    public String descriereStudent(){
-        String text="";
-        text+="Id: "+this.id+"\n";
-        text+="First name: "+this.firstName+"\n";
-        text+="Last name: "+this.lastName+"\n";
-        text+="Email: "+this.email+"\n";
-        text+="Age: "+this.age+"\n";
-        text+="Parola este "+this.password;
+
+    public String descriereStudent() {
+        String text = "";
+        text += "Id: " + this.id + "\n";
+        text += "First name: " + this.firstName + "\n";
+        text += "Last name: " + this.lastName + "\n";
+        text += "Email: " + this.email + "\n";
+        text += "Age: " + this.age + "\n";
+        text += "Parola este " + this.password;
         return text;
     }
 
-    public String toSave(){
-        return id+","+firstName+","+lastName+","+email+","+age+","+password;
+    public String toSave() {
+        return id + "," + firstName + "," + lastName + "," + email + "," + age + "," + password;
     }
 }
