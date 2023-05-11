@@ -1,7 +1,4 @@
-import ro.mycode.controllers.AdminController;
-import ro.mycode.controllers.BookController;
-import ro.mycode.controllers.CourseController;
-import ro.mycode.controllers.StudentController;
+import ro.mycode.controllers.*;
 import ro.mycode.model.Admin;
 import ro.mycode.model.Book;
 import ro.mycode.model.Student;
@@ -17,7 +14,13 @@ public class Main {
     public static void main( String[] args) {
        //ViewStudent viewStudent=new ViewStudent();
 
-        ViewLogin viewLogin=new ViewLogin();
+        //ViewLogin viewLogin=new ViewLogin();
+
+        EnrolmentController e1=new EnrolmentController();
+
+        e1.load();
+        System.out.println(e1.findMostPopularCourse());
+
 
 //        StudentController studentController=new StudentController();
 //        Student student=studentController.findStudentConectare("maria.popescu@gmail.com","pass1");

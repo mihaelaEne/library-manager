@@ -5,6 +5,8 @@ public class Course {
     private String name;
     private String department;
 
+
+
     public int getId() {
         return id;
     }
