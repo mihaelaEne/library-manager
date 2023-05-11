@@ -1,9 +1,6 @@
 package ro.mycode.view;
 
-import ro.mycode.controllers.AdminController;
-import ro.mycode.controllers.BookController;
-import ro.mycode.controllers.CourseController;
-import ro.mycode.controllers.StudentController;
+import ro.mycode.controllers.*;
 import ro.mycode.model.Admin;
 import ro.mycode.model.Course;
 
@@ -17,11 +14,13 @@ public class ViewAdmin {
     private Admin admins;
     private StudentController studentController;
     private AdminController adminController;
+    private EnrolmentController enrolmentController;
 
 
     public ViewAdmin(Admin admin) {
         adminController = new AdminController();
         courseController = new CourseController();
+        enrolmentController=new EnrolmentController();
         scanner = new Scanner(System.in);
         play();
     }
@@ -34,6 +33,7 @@ public class ViewAdmin {
         System.out.println("Apasa 3 pentru a sterge un admin");
         System.out.println("Apasa 4 pentru a edita un admin");
         System.out.println("Apasa 5 pentru a salava adminul si a ieesi");
+        System.out.println("Apasa 6 pt a afisa cursul cel mai popular");
         System.out.println("8-afisare cursuri");
         System.out.println("9-adaugare Curs");
         System.out.println("10-stergere curs");
@@ -86,7 +86,6 @@ public class ViewAdmin {
                 case 13:
                     running = false;
                     System.out.println("V-ati delogat");
-
                 default:
                     System.out.println("Alegere incorecta!");
                     break;

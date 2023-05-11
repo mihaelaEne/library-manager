@@ -2,9 +2,11 @@ package ro.mycode.view;
 
 import ro.mycode.controllers.BookController;
 import ro.mycode.controllers.CourseController;
+import ro.mycode.controllers.EnrolmentController;
 import ro.mycode.controllers.StudentController;
 import ro.mycode.model.Book;
 import ro.mycode.model.Course;
+import ro.mycode.model.Enrolment;
 import ro.mycode.model.Student;
 
 import java.time.LocalDate;
@@ -15,11 +17,12 @@ public class ViewStudent {
 
     private Student student;
     private StudentController studentController;
-
-    private BookController bookController;
-    private Scanner scanner;
-    private Course course;
     private CourseController courseController;
+    private BookController bookController;
+
+    private EnrolmentController enrolmentController;
+    private Scanner scanner;
+
 
 
     public ViewStudent(Student student) {
@@ -27,6 +30,7 @@ public class ViewStudent {
         this.student = student;
         bookController = new BookController();
         courseController = new CourseController();
+        enrolmentController=new EnrolmentController();
         scanner = new Scanner(System.in);
         play();
     }
@@ -41,6 +45,7 @@ public class ViewStudent {
         System.out.println("6-salveaza cartea si iesi");
         System.out.println("7-iesire FARA salvare cartii");
         System.out.println("8-pt a vedea toate cursurile");
+
 
 
     }
