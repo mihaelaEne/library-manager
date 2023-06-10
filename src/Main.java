@@ -14,12 +14,12 @@ public class Main {
     public static void main( String[] args) {
        //ViewStudent viewStudent=new ViewStudent();
 
-        //ViewLogin viewLogin=new ViewLogin();
+        ViewLogin viewLogin=new ViewLogin();
 
-        EnrolmentController e1=new EnrolmentController();
-
-        e1.load();
-        System.out.println(e1.findMostPopularCourse());
+//        EnrolmentController e1=new EnrolmentController();
+//
+//        e1.load();
+//        System.out.println(e1.findMostPopularCourse());
 
 
 //        StudentController studentController=new StudentController();
